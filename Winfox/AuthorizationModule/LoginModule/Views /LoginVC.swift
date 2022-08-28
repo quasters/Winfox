@@ -11,7 +11,7 @@ final class LoginVC: UIViewController {
     var viewModel: LoginViewModelInput?
     
     private let label = UILabel()
-    private let inputBlockView = InputBlockView()
+    private let inputBlockView = InputLoginBlockView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,9 @@ final class LoginVC: UIViewController {
     
     @objc
     private func nextButtonTouched() {
-        print("touched")
+        if let phoneNumber = inputBlockView.mobileInputTextField.getFormattedPhoneNumber(format: .International) {
+            viewModel?.nextStep(phoneNumber: phoneNumber)
+        }
     }
 }
 

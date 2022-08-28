@@ -28,14 +28,14 @@ final class AuthorizationCoordinator: AuthorizationCoordinatorProtocol {
     }
     
     public func showLoginViewController() {
-        let vc = builder.createLoginModule(completion: { [weak self] in
-            self?.showPasswordViewController()
+        let vc = builder.createLoginModule(completion: { [showPasswordViewController] login in
+            showPasswordViewController(login)
         })
         navigationController.pushViewController(vc, animated: true)
     }
     
-    public func showPasswordViewController() {
-        let vc = builder.createPasswordModule { [weak self] in
+    public func showPasswordViewController(login: String) {
+        let vc = builder.createPasswordModule(login: login) { [weak self] in
             self?.finish()
         }
         navigationController.pushViewController(vc, animated: true)

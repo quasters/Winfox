@@ -8,8 +8,8 @@
 import UIKit
 import FlagPhoneNumber
 
-final class InputBlockView: UIView {
-    private let mobileInputTextField = FPNTextField()
+final class InputLoginBlockView: UIView {
+    let mobileInputTextField = FPNTextField()
     let nextButton = UIButton()
     
     func configure() {
@@ -22,6 +22,7 @@ final class InputBlockView: UIView {
         
         mobileInputTextField.delegate = self
         mobileInputTextField.setCountries(including: [.RU])
+        mobileInputTextField.font = UIFont.systemFont(ofSize: 20)
         
         self.addSubview(mobileInputTextField)
         mobileInputTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -51,7 +52,7 @@ final class InputBlockView: UIView {
 
 
 // MARK: - FPNTextFieldDelegate
-extension InputBlockView: FPNTextFieldDelegate {
+extension InputLoginBlockView: FPNTextFieldDelegate {
     
     func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
         return
