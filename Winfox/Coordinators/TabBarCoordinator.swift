@@ -18,9 +18,9 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     
     public var type: CoordinatorType = .tab
     
-    private var builder: BuilderProtocol
+    private var builder: TabBarBuilderProtocol
     
-    required init(_ navigationController: UINavigationController, builder: BuilderProtocol = Builder()) {
+    required init(_ navigationController: UINavigationController, builder: TabBarBuilderProtocol = TabBarBuilder()) {
         self.navigationController = navigationController
         tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = .white
@@ -30,7 +30,7 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     }
     
     public func start() {
-        let pages: [TabBarPage] = [.main, .search]
+        let pages: [TabBarPage] = [.main, .map]
         let controllers = pages.map({ getTabControllers($0) })
         prepareTabBarModule(withTabControllers: controllers)
     }
@@ -52,36 +52,12 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         
         switch page {
         case .main:
-            let vc = builder.createMainModule { [showInfoModule] id in
-                showInfoModule(id)
-            }
-            navController.pushViewController(vc, animated: true)
+            break
             
-        case .search:
-            let vc = builder.createSearchModule { [showInfoModule, showListModule] id, link in
-                if let id = id {
-                    showInfoModule(id)
-                }
-                if let link = link {
-                    showListModule(link)
-                }
-            }
-            navController.pushViewController(vc, animated: true)
+        case .map:
+            break
         }
         return navController
-    }
-    
-    private func showInfoModule(with id: Int) {
-        let vc = builder.createInfoModule(movie_id: id, completion: nil)
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    private func showListModule(link: String) {
-        let vc = builder.createListModule(link: link) { [showInfoModule] id in
-            guard let id = id else { return }
-            showInfoModule(id)
-        }
-        navigationController.pushViewController(vc, animated: true)
     }
     
     private func prepareTabBarModule(withTabControllers tabControllers: [UIViewController]) {

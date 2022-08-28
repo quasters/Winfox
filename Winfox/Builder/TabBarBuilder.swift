@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol TabBarBuilderProtocol {
+   
+}
+
+final class TabBarBuilder: TabBarBuilderProtocol {
+    
+}

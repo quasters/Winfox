@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol AuthorizationCoordinatorProtocol: Coordinator {
+    func showLoginViewController()
+    func showPasswordViewController()
+}

@@ -7,23 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5173A90BCD37D576C7874046 /* Pods_Winfox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1F02507BC4CE6484B1999 /* Pods_Winfox.framework */; };
 		D132898D28BB948D004EB1CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D132898C28BB948D004EB1CE /* AppDelegate.swift */; };
 		D132898F28BB948D004EB1CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D132898E28BB948D004EB1CE /* SceneDelegate.swift */; };
-		D132899128BB948D004EB1CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D132899028BB948D004EB1CE /* ViewController.swift */; };
-		D132899428BB948D004EB1CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D132899228BB948D004EB1CE /* Main.storyboard */; };
+		D132899128BB948D004EB1CE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D132899028BB948D004EB1CE /* LoginVC.swift */; };
 		D132899628BB949A004EB1CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D132899528BB949A004EB1CE /* Assets.xcassets */; };
 		D132899928BB949A004EB1CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D132899728BB949A004EB1CE /* LaunchScreen.storyboard */; };
+		D13289A128BB9AA1004EB1CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D13289A028BB9AA1004EB1CE /* GoogleService-Info.plist */; };
+		D13289A828BB9FD7004EB1CE /* AuthorizationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289A728BB9FD7004EB1CE /* AuthorizationBuilder.swift */; };
+		D13289AA28BBA019004EB1CE /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289A928BBA019004EB1CE /* LoginVM.swift */; };
+		D13289B628BBA0EC004EB1CE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289AC28BBA0EC004EB1CE /* AppCoordinator.swift */; };
+		D13289B728BBA0EC004EB1CE /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289AD28BBA0EC004EB1CE /* TabBarCoordinator.swift */; };
+		D13289B828BBA0EC004EB1CE /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289AF28BBA0EC004EB1CE /* CoordinatorType.swift */; };
+		D13289B928BBA0EC004EB1CE /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289B028BBA0EC004EB1CE /* TabBarPage.swift */; };
+		D13289BA28BBA0EC004EB1CE /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289B228BBA0EC004EB1CE /* AppCoordinatorProtocol.swift */; };
+		D13289BB28BBA0EC004EB1CE /* TabBarCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289B328BBA0EC004EB1CE /* TabBarCoordinatorProtocol.swift */; };
+		D13289BC28BBA0EC004EB1CE /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289B428BBA0EC004EB1CE /* CoordinatorFinishDelegate.swift */; };
+		D13289BD28BBA0EC004EB1CE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289B528BBA0EC004EB1CE /* Coordinator.swift */; };
+		D13289BF28BBA357004EB1CE /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289BE28BBA357004EB1CE /* AuthorizationCoordinator.swift */; };
+		D13289C128BBADA2004EB1CE /* AuthorizationCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289C028BBADA2004EB1CE /* AuthorizationCoordinatorProtocol.swift */; };
+		D13289C328BBB4A4004EB1CE /* InputBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289C228BBB4A4004EB1CE /* InputBlockView.swift */; };
+		D13289CA28BBC365004EB1CE /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289C928BBC365004EB1CE /* PasswordVC.swift */; };
+		D13289CC28BBC37E004EB1CE /* PasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289CB28BBC37E004EB1CE /* PasswordVM.swift */; };
+		D13289CE28BBC455004EB1CE /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289CD28BBC455004EB1CE /* TabBarBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33F1F02507BC4CE6484B1999 /* Pods_Winfox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winfox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CEB46F45BEA070592551943 /* Pods-Winfox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winfox.debug.xcconfig"; path = "Target Support Files/Pods-Winfox/Pods-Winfox.debug.xcconfig"; sourceTree = "<group>"; };
+		9411EE6962871D895E829633 /* Pods-Winfox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winfox.release.xcconfig"; path = "Target Support Files/Pods-Winfox/Pods-Winfox.release.xcconfig"; sourceTree = "<group>"; };
 		D132898928BB948D004EB1CE /* Winfox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winfox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D132898C28BB948D004EB1CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D132898E28BB948D004EB1CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D132899028BB948D004EB1CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D132899328BB948D004EB1CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D132899028BB948D004EB1CE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D132899528BB949A004EB1CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D132899828BB949A004EB1CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D132899A28BB949A004EB1CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13289A028BB9AA1004EB1CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D13289A728BB9FD7004EB1CE /* AuthorizationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationBuilder.swift; sourceTree = "<group>"; };
+		D13289A928BBA019004EB1CE /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		D13289AC28BBA0EC004EB1CE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D13289AD28BBA0EC004EB1CE /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		D13289AF28BBA0EC004EB1CE /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		D13289B028BBA0EC004EB1CE /* TabBarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
+		D13289B228BBA0EC004EB1CE /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D13289B328BBA0EC004EB1CE /* TabBarCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D13289B428BBA0EC004EB1CE /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
+		D13289B528BBA0EC004EB1CE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D13289BE28BBA357004EB1CE /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		D13289C028BBADA2004EB1CE /* AuthorizationCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D13289C228BBB4A4004EB1CE /* InputBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBlockView.swift; sourceTree = "<group>"; };
+		D13289C928BBC365004EB1CE /* PasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
+		D13289CB28BBC37E004EB1CE /* PasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVM.swift; sourceTree = "<group>"; };
+		D13289CD28BBC455004EB1CE /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +67,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5173A90BCD37D576C7874046 /* Pods_Winfox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34DC9C3CB661925C51477BD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CEB46F45BEA070592551943 /* Pods-Winfox.debug.xcconfig */,
+				9411EE6962871D895E829633 /* Pods-Winfox.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E15F007D7054A8BC472A168 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33F1F02507BC4CE6484B1999 /* Pods_Winfox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D132898028BB948D004EB1CE = {
 			isa = PBXGroup;
 			children = (
 				D132898B28BB948D004EB1CE /* Winfox */,
 				D132898A28BB948D004EB1CE /* Products */,
+				34DC9C3CB661925C51477BD9 /* Pods */,
+				4E15F007D7054A8BC472A168 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +112,127 @@
 		D132898B28BB948D004EB1CE /* Winfox */ = {
 			isa = PBXGroup;
 			children = (
-				D132898C28BB948D004EB1CE /* AppDelegate.swift */,
-				D132898E28BB948D004EB1CE /* SceneDelegate.swift */,
-				D132899028BB948D004EB1CE /* ViewController.swift */,
-				D132899228BB948D004EB1CE /* Main.storyboard */,
+				D13289A228BB9F51004EB1CE /* App */,
+				D13289A628BB9FA4004EB1CE /* Builder */,
+				D13289AB28BBA0EC004EB1CE /* Coordinators */,
+				D13289A328BB9F5F004EB1CE /* AuthorizationModule */,
 				D132899528BB949A004EB1CE /* Assets.xcassets */,
 				D132899728BB949A004EB1CE /* LaunchScreen.storyboard */,
 				D132899A28BB949A004EB1CE /* Info.plist */,
+				D13289A028BB9AA1004EB1CE /* GoogleService-Info.plist */,
 			);
 			path = Winfox;
+			sourceTree = "<group>";
+		};
+		D13289A228BB9F51004EB1CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D132898C28BB948D004EB1CE /* AppDelegate.swift */,
+				D132898E28BB948D004EB1CE /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D13289A328BB9F5F004EB1CE /* AuthorizationModule */ = {
+			isa = PBXGroup;
+			children = (
+				D13289C528BBC2DC004EB1CE /* LoginModule */,
+				D13289C628BBC2F9004EB1CE /* PasswordModule */,
+			);
+			path = AuthorizationModule;
+			sourceTree = "<group>";
+		};
+		D13289A428BB9F86004EB1CE /* ViewMdels */ = {
+			isa = PBXGroup;
+			children = (
+				D13289A928BBA019004EB1CE /* LoginVM.swift */,
+			);
+			path = ViewMdels;
+			sourceTree = "<group>";
+		};
+		D13289A528BB9F8F004EB1CE /* Views  */ = {
+			isa = PBXGroup;
+			children = (
+				D132899028BB948D004EB1CE /* LoginVC.swift */,
+				D13289C228BBB4A4004EB1CE /* InputBlockView.swift */,
+			);
+			path = "Views ";
+			sourceTree = "<group>";
+		};
+		D13289A628BB9FA4004EB1CE /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D13289A728BB9FD7004EB1CE /* AuthorizationBuilder.swift */,
+				D13289CD28BBC455004EB1CE /* TabBarBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		D13289AB28BBA0EC004EB1CE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D13289AC28BBA0EC004EB1CE /* AppCoordinator.swift */,
+				D13289BE28BBA357004EB1CE /* AuthorizationCoordinator.swift */,
+				D13289AD28BBA0EC004EB1CE /* TabBarCoordinator.swift */,
+				D13289AE28BBA0EC004EB1CE /* Enums */,
+				D13289B128BBA0EC004EB1CE /* Protocols */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D13289AE28BBA0EC004EB1CE /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D13289AF28BBA0EC004EB1CE /* CoordinatorType.swift */,
+				D13289B028BBA0EC004EB1CE /* TabBarPage.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		D13289B128BBA0EC004EB1CE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D13289B528BBA0EC004EB1CE /* Coordinator.swift */,
+				D13289B428BBA0EC004EB1CE /* CoordinatorFinishDelegate.swift */,
+				D13289B228BBA0EC004EB1CE /* AppCoordinatorProtocol.swift */,
+				D13289B328BBA0EC004EB1CE /* TabBarCoordinatorProtocol.swift */,
+				D13289C028BBADA2004EB1CE /* AuthorizationCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D13289C528BBC2DC004EB1CE /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				D13289A428BB9F86004EB1CE /* ViewMdels */,
+				D13289A528BB9F8F004EB1CE /* Views  */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		D13289C628BBC2F9004EB1CE /* PasswordModule */ = {
+			isa = PBXGroup;
+			children = (
+				D13289C828BBC335004EB1CE /* ViewModels */,
+				D13289C728BBC32D004EB1CE /* Views */,
+			);
+			path = PasswordModule;
+			sourceTree = "<group>";
+		};
+		D13289C728BBC32D004EB1CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D13289C928BBC365004EB1CE /* PasswordVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D13289C828BBC335004EB1CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D13289CB28BBC37E004EB1CE /* PasswordVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D132899D28BB949A004EB1CE /* Build configuration list for PBXNativeTarget "Winfox" */;
 			buildPhases = (
+				78FB2888B6C652797A3BD2B2 /* [CP] Check Pods Manifest.lock */,
 				D132898528BB948D004EB1CE /* Sources */,
 				D132898628BB948D004EB1CE /* Frameworks */,
 				D132898728BB948D004EB1CE /* Resources */,
+				7499158D498534225F7AE49C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,35 +296,85 @@
 			buildActionMask = 2147483647;
 			files = (
 				D132899928BB949A004EB1CE /* LaunchScreen.storyboard in Resources */,
+				D13289A128BB9AA1004EB1CE /* GoogleService-Info.plist in Resources */,
 				D132899628BB949A004EB1CE /* Assets.xcassets in Resources */,
-				D132899428BB948D004EB1CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7499158D498534225F7AE49C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Winfox/Pods-Winfox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Winfox/Pods-Winfox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Winfox/Pods-Winfox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78FB2888B6C652797A3BD2B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Winfox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D132898528BB948D004EB1CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D132899128BB948D004EB1CE /* ViewController.swift in Sources */,
+				D13289BB28BBA0EC004EB1CE /* TabBarCoordinatorProtocol.swift in Sources */,
+				D13289CA28BBC365004EB1CE /* PasswordVC.swift in Sources */,
+				D13289B628BBA0EC004EB1CE /* AppCoordinator.swift in Sources */,
+				D13289BD28BBA0EC004EB1CE /* Coordinator.swift in Sources */,
+				D13289BC28BBA0EC004EB1CE /* CoordinatorFinishDelegate.swift in Sources */,
+				D13289AA28BBA019004EB1CE /* LoginVM.swift in Sources */,
+				D13289C328BBB4A4004EB1CE /* InputBlockView.swift in Sources */,
+				D13289CC28BBC37E004EB1CE /* PasswordVM.swift in Sources */,
+				D132899128BB948D004EB1CE /* LoginVC.swift in Sources */,
+				D13289B728BBA0EC004EB1CE /* TabBarCoordinator.swift in Sources */,
 				D132898D28BB948D004EB1CE /* AppDelegate.swift in Sources */,
+				D13289C128BBADA2004EB1CE /* AuthorizationCoordinatorProtocol.swift in Sources */,
 				D132898F28BB948D004EB1CE /* SceneDelegate.swift in Sources */,
+				D13289CE28BBC455004EB1CE /* TabBarBuilder.swift in Sources */,
+				D13289B928BBA0EC004EB1CE /* TabBarPage.swift in Sources */,
+				D13289BF28BBA357004EB1CE /* AuthorizationCoordinator.swift in Sources */,
+				D13289B828BBA0EC004EB1CE /* CoordinatorType.swift in Sources */,
+				D13289BA28BBA0EC004EB1CE /* AppCoordinatorProtocol.swift in Sources */,
+				D13289A828BB9FD7004EB1CE /* AuthorizationBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D132899228BB948D004EB1CE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D132899328BB948D004EB1CE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D132899728BB949A004EB1CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +502,7 @@
 		};
 		D132899E28BB949A004EB1CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEB46F45BEA070592551943 /* Pods-Winfox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +513,7 @@
 				INFOPLIST_FILE = Winfox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,12 +525,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D132899F28BB949A004EB1CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9411EE6962871D895E829633 /* Pods-Winfox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +542,7 @@
 				INFOPLIST_FILE = Winfox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +554,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

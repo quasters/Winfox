@@ -10,12 +10,12 @@ import UIKit
 
 enum TabBarPage {
     case main
-    case search
+    case map
     
     init?(index: Int) {
         switch index {
         case 0: self = .main
-        case 1: self = .search
+        case 1: self = .map
         default: return nil
         }
     }
@@ -24,7 +24,7 @@ enum TabBarPage {
         switch self {
         case .main:
             return 0
-        case .search:
+        case .map:
             return 1
         }
     }
@@ -33,8 +33,8 @@ enum TabBarPage {
         switch self {
         case .main:
             return "Home"
-        case .search:
-            return "Search"
+        case .map:
+            return "Map"
         }
     }
     
@@ -42,8 +42,8 @@ enum TabBarPage {
         switch self {
         case .main:
             return UIImage(systemName: isSelected ? "house.circle.fill" : "house.circle")
-        case .search:
-            return UIImage(systemName: isSelected ? "magnifyingglass.fill" : "magnifyingglass")
+        case .map:
+            return UIImage(systemName: isSelected ? "map.circle.fill" : "map.circle")
         }
     }
 }

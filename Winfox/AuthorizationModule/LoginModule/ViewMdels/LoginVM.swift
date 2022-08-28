@@ -17,4 +17,8 @@ final class LoginVM: LoginViewModelInput {
     required init(completion: (() -> Void)?) {
         self.completion = completion
     }
+    
+    func request() {
+        
+    }
 }

@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol PasswordViewModelInput {
+    
+}
+
+final class PasswordVM: PasswordViewModelInput {
+    let completion: (() -> Void)?
+    
+    required init(completion: (() -> Void)?) {
+        self.completion = completion
+    }
+}

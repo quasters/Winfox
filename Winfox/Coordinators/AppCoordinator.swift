@@ -24,10 +24,17 @@ class AppCoordinator: AppCoordinatorProtocol {
     }
     
     public func start() {
-        showMainFlow()
+        showAuthorizationFlow()
     }
     
-    public func showMainFlow() {
+    public func showAuthorizationFlow() {
+        let authorizationCoordinator: AuthorizationCoordinatorProtocol = AuthorizationCoordinator(navigationController)
+        authorizationCoordinator.finishDelegate = self
+        authorizationCoordinator.start()
+        childCoordinators.append(authorizationCoordinator)
+    }
+    
+    public func showTabFlow() {
         let tabBarCoordinator: TabBarCoordinatorProtocol = TabBarCoordinator(navigationController)
         tabBarCoordinator.finishDelegate = self
         tabBarCoordinator.start()
@@ -41,6 +48,9 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         childCoordinators = childCoordinators.filter({ $0.type != childCoordinator.type })
         
         switch childCoordinator.type  {
+        case .authorization:
+            navigationController.viewControllers.removeAll()
+            showTabFlow()
         case .tab:
             navigationController.viewControllers.removeAll()
         default: break
