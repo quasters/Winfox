@@ -22,9 +22,6 @@ final class NetworkService: NetworkServiceProtocol {
                 }
                 guard let verificationID = verificationID else { return }
                 completion(.success(verificationID))
-                self.login(verificationID: verificationID, verificationCode: "123456") { result in
-                    return
-                }
             }
     }
     

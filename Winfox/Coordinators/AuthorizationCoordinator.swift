@@ -8,7 +8,7 @@
 import UIKit
 
 final class AuthorizationCoordinator: AuthorizationCoordinatorProtocol {
-    weak var finishDelegate: CoordinatorFinishDelegate?
+    var finishDelegate: CoordinatorFinishDelegate?
     
     var navigationController: UINavigationController
     

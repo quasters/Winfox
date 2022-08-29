@@ -23,11 +23,7 @@ final class PasswordVC: UIViewController {
         createInputBlockView()
         setUpdateButton()
         
-        viewModel?.passwordRequest(response: { [weak self] isSuccessed in
-            if !isSuccessed {
-                self?.showErrorAlert(message: "String")
-            }
-        })
+        request()
         
         updateButtonTouched()
     }
@@ -78,6 +74,14 @@ final class PasswordVC: UIViewController {
         ])
     }
     
+    private func request() {
+        viewModel?.passwordRequest(response: { [weak self] isSuccessed in
+            if !isSuccessed {
+                self?.showErrorAlert(message: "String")
+            }
+        })
+    }
+    
     @objc
     private func loginButtonTouched() {
         viewModel?.login(verificationCode: inputBlockView.passwordTextField.text ?? "", completion: { [viewModel, showErrorAlert] isSuccessed in
@@ -93,6 +97,9 @@ final class PasswordVC: UIViewController {
     private func updateButtonTouched() {
         updateButton.isUserInteractionEnabled = false
         updateButton.alpha = 0.5
+        
+        request()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) { [weak self] in
             self?.updateButton.isUserInteractionEnabled = true
             self?.updateButton.alpha = 1.0
