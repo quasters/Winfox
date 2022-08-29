@@ -8,7 +8,9 @@
 import Foundation
 
 protocol PasswordViewModelInput {
-    //var phoneNumber: String { get }
+    func passwordRequest(response: @escaping (Bool) -> Void)
+    func login(verificationCode: String, completion: @escaping (Bool) -> Void)
+    func exitAuthorization()
 }
 
 final class PasswordVM: PasswordViewModelInput {
@@ -30,5 +32,19 @@ final class PasswordVM: PasswordViewModelInput {
             self?.verificationID = verificationID
             response(verificationID != nil)
         }
+    }
+    
+    public func login(verificationCode: String, completion: @escaping (Bool) -> Void) {
+        if let verificationID = verificationID {
+            network.login(verificationID: verificationID, verificationCode: verificationCode) { isSuccessed in
+                completion(isSuccessed)
+            }
+        } else {
+            return completion(false)
+        }
+    }
+    
+    public func exitAuthorization() {
+        completion?()
     }
 }

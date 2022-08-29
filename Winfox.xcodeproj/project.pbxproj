@@ -33,6 +33,10 @@
 		D13289D028BBD29A004EB1CE /* InputPasswordBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289CF28BBD29A004EB1CE /* InputPasswordBlockView.swift */; };
 		D13289D328BBDF38004EB1CE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289D228BBDF38004EB1CE /* NetworkService.swift */; };
 		D13289D728BBE266004EB1CE /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289D628BBE266004EB1CE /* NetworkFetcher.swift */; };
+		D13289E428BC3730004EB1CE /* LeftVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289E328BC3730004EB1CE /* LeftVM.swift */; };
+		D13289E628BC3768004EB1CE /* LeftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289E528BC3768004EB1CE /* LeftVC.swift */; };
+		D13289E828BC3787004EB1CE /* RightVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289E728BC3787004EB1CE /* RightVM.swift */; };
+		D13289EA28BC37A2004EB1CE /* RightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13289E928BC37A2004EB1CE /* RightVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		D13289CF28BBD29A004EB1CE /* InputPasswordBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordBlockView.swift; sourceTree = "<group>"; };
 		D13289D228BBDF38004EB1CE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D13289D628BBE266004EB1CE /* NetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcher.swift; sourceTree = "<group>"; };
+		D13289E328BC3730004EB1CE /* LeftVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftVM.swift; sourceTree = "<group>"; };
+		D13289E528BC3768004EB1CE /* LeftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftVC.swift; sourceTree = "<group>"; };
+		D13289E728BC3787004EB1CE /* RightVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightVM.swift; sourceTree = "<group>"; };
+		D13289E928BC37A2004EB1CE /* RightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				D13289A228BB9F51004EB1CE /* App */,
-				D13289A628BB9FA4004EB1CE /* Builder */,
+				D13289A628BB9FA4004EB1CE /* Builders */,
 				D13289AB28BBA0EC004EB1CE /* Coordinators */,
 				D13289D128BBDEC5004EB1CE /* Networking */,
 				D13289A328BB9F5F004EB1CE /* AuthorizationModule */,
+				D13289DC28BC36B9004EB1CE /* TabBarModule */,
 				D132899528BB949A004EB1CE /* Assets.xcassets */,
 				D132899728BB949A004EB1CE /* LaunchScreen.storyboard */,
 				D132899A28BB949A004EB1CE /* Info.plist */,
@@ -166,13 +175,13 @@
 			path = "Views ";
 			sourceTree = "<group>";
 		};
-		D13289A628BB9FA4004EB1CE /* Builder */ = {
+		D13289A628BB9FA4004EB1CE /* Builders */ = {
 			isa = PBXGroup;
 			children = (
 				D13289A728BB9FD7004EB1CE /* AuthorizationBuilder.swift */,
 				D13289CD28BBC455004EB1CE /* TabBarBuilder.swift */,
 			);
-			path = Builder;
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		D13289AB28BBA0EC004EB1CE /* Coordinators */ = {
@@ -250,6 +259,65 @@
 				D13289D628BBE266004EB1CE /* NetworkFetcher.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		D13289DC28BC36B9004EB1CE /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				D13289DD28BC36DC004EB1CE /* LeftModule */,
+				D13289DE28BC36EA004EB1CE /* RightModule */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		D13289DD28BC36DC004EB1CE /* LeftModule */ = {
+			isa = PBXGroup;
+			children = (
+				D13289E028BC370C004EB1CE /* ViewModels */,
+				D13289DF28BC36FF004EB1CE /* Views */,
+			);
+			path = LeftModule;
+			sourceTree = "<group>";
+		};
+		D13289DE28BC36EA004EB1CE /* RightModule */ = {
+			isa = PBXGroup;
+			children = (
+				D13289E228BC371B004EB1CE /* ViewModels */,
+				D13289E128BC3717004EB1CE /* Views */,
+			);
+			path = RightModule;
+			sourceTree = "<group>";
+		};
+		D13289DF28BC36FF004EB1CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D13289E528BC3768004EB1CE /* LeftVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D13289E028BC370C004EB1CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D13289E328BC3730004EB1CE /* LeftVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D13289E128BC3717004EB1CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D13289E928BC37A2004EB1CE /* RightVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D13289E228BC371B004EB1CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D13289E728BC3787004EB1CE /* RightVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,10 +436,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13289D028BBD29A004EB1CE /* InputPasswordBlockView.swift in Sources */,
+				D13289E428BC3730004EB1CE /* LeftVM.swift in Sources */,
 				D13289BB28BBA0EC004EB1CE /* TabBarCoordinatorProtocol.swift in Sources */,
+				D13289E628BC3768004EB1CE /* LeftVC.swift in Sources */,
 				D13289CA28BBC365004EB1CE /* PasswordVC.swift in Sources */,
 				D13289B628BBA0EC004EB1CE /* AppCoordinator.swift in Sources */,
 				D13289BD28BBA0EC004EB1CE /* Coordinator.swift in Sources */,
+				D13289EA28BC37A2004EB1CE /* RightVC.swift in Sources */,
 				D13289BC28BBA0EC004EB1CE /* CoordinatorFinishDelegate.swift in Sources */,
 				D13289AA28BBA019004EB1CE /* LoginVM.swift in Sources */,
 				D13289C328BBB4A4004EB1CE /* InputLoginBlockView.swift in Sources */,
@@ -387,6 +458,7 @@
 				D13289B928BBA0EC004EB1CE /* TabBarPage.swift in Sources */,
 				D13289BF28BBA357004EB1CE /* AuthorizationCoordinator.swift in Sources */,
 				D13289B828BBA0EC004EB1CE /* CoordinatorType.swift in Sources */,
+				D13289E828BC3787004EB1CE /* RightVM.swift in Sources */,
 				D13289BA28BBA0EC004EB1CE /* AppCoordinatorProtocol.swift in Sources */,
 				D13289A828BB9FD7004EB1CE /* AuthorizationBuilder.swift in Sources */,
 			);

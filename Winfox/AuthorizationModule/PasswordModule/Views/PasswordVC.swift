@@ -22,6 +22,14 @@ final class PasswordVC: UIViewController {
         setLabel()
         createInputBlockView()
         setUpdateButton()
+        
+        viewModel?.passwordRequest(response: { [weak self] isSuccessed in
+            if !isSuccessed {
+                self?.showErrorAlert(message: "String")
+            }
+        })
+        
+        updateButtonTouched()
     }
     
     private func setLabel() {
@@ -41,7 +49,7 @@ final class PasswordVC: UIViewController {
     private func createInputBlockView() {
         inputBlockView.configure()
         
-        inputBlockView.nextButton.addTarget(self, action: #selector(nextButtonTouched), for: .touchUpInside)
+        inputBlockView.nextButton.addTarget(self, action: #selector(loginButtonTouched), for: .touchUpInside)
         
         self.view.addSubview(inputBlockView)
         
@@ -71,16 +79,31 @@ final class PasswordVC: UIViewController {
     }
     
     @objc
-    private func nextButtonTouched() {
-        
+    private func loginButtonTouched() {
+        viewModel?.login(verificationCode: inputBlockView.passwordTextField.text ?? "", completion: { [viewModel, showErrorAlert] isSuccessed in
+            if isSuccessed {
+                viewModel?.exitAuthorization()
+            } else {
+                showErrorAlert("Ошибка авторизации. Неправильно введен код из сообщения.")
+            }
+        })
     }
     
     @objc
     private func updateButtonTouched() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
-            self?.updateButton.isUserInteractionEnabled = false
-            self?.updateButton.alpha = 0.5
+        updateButton.isUserInteractionEnabled = false
+        updateButton.alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) { [weak self] in
+            self?.updateButton.isUserInteractionEnabled = true
+            self?.updateButton.alpha = 1.0
         }
+    }
+    
+    private func showErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

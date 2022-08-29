@@ -52,10 +52,11 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         
         switch page {
         case .main:
-            break
-            
+            let vc = builder.createLeftModule(completion: nil)
+            navController.pushViewController(vc, animated: true)
         case .map:
-            break
+            let vc = builder.createRightModule(completion: nil)
+            navController.pushViewController(vc, animated: true)
         }
         return navController
     }

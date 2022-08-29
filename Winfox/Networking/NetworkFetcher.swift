@@ -9,6 +9,7 @@ import Foundation
 
 protocol NetworkFetcherProtocol {
     func fetchID(phoneNumber: String, response: @escaping (String?) -> Void)
+    func login(verificationID: String, verificationCode: String, completion: @escaping (Bool) -> Void)
 }
 
 final class NetworkFetcher: NetworkFetcherProtocol {
@@ -28,5 +29,9 @@ final class NetworkFetcher: NetworkFetcherProtocol {
                 response(nil)
             }
         }
+    }
+    
+    func login(verificationID: String, verificationCode: String, completion: @escaping (Bool) -> Void) {
+        networkService.login(verificationID: verificationID, verificationCode: verificationCode, completion: completion)
     }
 }

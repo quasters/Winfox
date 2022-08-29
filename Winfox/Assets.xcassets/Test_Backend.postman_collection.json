@@ -1,0 +1,57 @@
+{
+    "info": {
+        "_postman_id": "6c9925cd-1e06-4299-b329-e687b6ed55b0",
+        "name": "Test Backend",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "checkUser",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{    \"phone\":\"+79599344544\",    \"id\":\"AIzAUWEvcu6yv446uvcwu6w4ucvywu4\"}"
+                },
+                "url": {
+                    "raw": "{{url}}/checkUser",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "checkUser"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "name": "Example #1",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{    \"phone\":\"+79599344544\",    \"id\":\"AIzAUWEvcu6yv446uvcwu6w4ucvywu4\"}"
+                        },
+                        "url": {
+                            "raw": "{{url}}/checkUser",
+                            "host": [
+                                "{{url}}"
+                            ],
+                            "path": [
+                                "checkUser"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [],
+                    "cookie": [],
+                    "body": "{\"phone\":\"+79599344544\",\"id\":\"AIzAUWEvcu6yv446uvcwu6w4ucvywu4\"}"
+                }
+            ]
+        }
+    ]
+}

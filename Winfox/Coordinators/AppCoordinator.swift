@@ -10,7 +10,7 @@ import UIKit
 
 class AppCoordinator: AppCoordinatorProtocol {
     
-    public var finishDelegate: CoordinatorFinishDelegate?
+    weak var finishDelegate: CoordinatorFinishDelegate? 
     
     public var navigationController: UINavigationController
     
