@@ -13,7 +13,7 @@
 В разработанном приложении можно оценить навыки работы с:
   - Библиотеками: 
       1. Firebase Authorization
-      2. lagPhoneNumber 
+      2. FlagPhoneNumber 
   - Patterns
   - UIKit
   - Auto Layout
